@@ -4,6 +4,7 @@ class CreateRankitRankables < ActiveRecord::Migration
       t.integer :creator_id
       t.string :name
       t.text :description
+      t.integer :average_score
 
       t.timestamps
     end

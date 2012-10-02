@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(:version => 20121002203001) do
     t.integer  "creator_id"
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "average_score"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "rankit_scores", :force => true do |t|

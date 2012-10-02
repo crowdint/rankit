@@ -10,4 +10,4 @@ Feature: User can score a Rankable
     And I press "Update"
     Then I should be on the rankables page
     And I should see "Your rank has been recorded"
-    And user should have a score of 3 for "Heineken"
+    And I should see "3.0"

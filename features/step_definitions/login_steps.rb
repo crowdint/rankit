@@ -2,10 +2,9 @@ When /^I go to the login page$/ do
   visit rankit.new_user_session_path
 end
 
-When /^I enter the "(.*?)" user credentials$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+When /^I enter the "(.*?)" user credentials$/ do |email|
+  save_and_open_page
+  fill_in 'Email', :with => email
+  fill_in 'Password', :with => '12345'
 end
 
-When /^I press "(.*?)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
-end

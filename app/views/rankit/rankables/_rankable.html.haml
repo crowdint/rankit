@@ -2,3 +2,4 @@
   %td= rankable.name
   %td= link_to 'Edit', rankit.edit_rankable_path(rankable), :class => 'btn btn-small'
   %td= link_to 'Delete', rankit.rankable_path(rankable), :method => :delete, :class => 'btn btn-small', :confirm => 'Are you sure?'
+  %td= link_to 'Score', rankit.edit_rankable_score_path(rankable), :class => 'btn btn-small'

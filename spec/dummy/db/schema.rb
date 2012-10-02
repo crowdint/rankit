@@ -11,12 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121002071154) do
+ActiveRecord::Schema.define(:version => 20121002203001) do
 
   create_table "rankit_rankables", :force => true do |t|
     t.integer  "creator_id"
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "rankit_scores", :force => true do |t|
+    t.integer  "ranker_id"
+    t.integer  "rankable_id"
+    t.integer  "score"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end

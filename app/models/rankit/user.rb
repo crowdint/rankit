@@ -2,7 +2,8 @@ module Rankit
   class User < ActiveRecord::Base
     attr_accessible :email
 
-    devise :database_authenticatable, :timeoutable
+    has_many :scores, :foreign_key => 'ranker_id'
 
+    devise :database_authenticatable, :timeoutable
   end
 end

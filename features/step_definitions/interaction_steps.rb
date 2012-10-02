@@ -28,3 +28,6 @@ Then /^I should be on the home page$/ do
   current_path.should == rankit.root_path
 end
 
+When /^I select "(.*?)" for "(.*?)"$/ do |option, select_label|
+  select option, :from => select_label
+end

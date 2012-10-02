@@ -15,3 +15,8 @@ When /^I click on its (.*?) button$/ do |button_text|
     click_link button_text
   end
 end
+
+Then /^user should have a score of (\d+) for "(.*?)"$/ do |expected_score, rankable_name|
+  rankable = Rankit::Rankable.find_by_name rankable_name
+  @user.scores.reload.find_by_rankable_id(rankable.id).score.should == expected_score.to_i
+end

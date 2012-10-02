@@ -5,3 +5,13 @@ end
 Then /^I should be on the rankables page$/ do
   current_path.should == rankit.rankables_path
 end
+
+Given /^a rankable exists with name: "(.*?)"$/ do |name|
+  @rankable = Rankit::Rankable.create! :name => name
+end
+
+When /^I click on its edit button$/ do
+  within "tr#rankable_#{@rankable.id}" do
+    click_link 'Edit'
+  end
+end

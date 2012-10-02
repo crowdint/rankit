@@ -19,6 +19,18 @@ module Rankit
       end
     end
 
+    def edit
+      @rankable = Rankit::Rankable.find(params[:id])
+    end
+
+    def update
+      @rankable = Rankit::Rankable.find(params[:id])
+      @rankable.update_attributes rankable_params
+      if @rankable.save
+        redirect_to rankit.rankables_path, :notice => 'Rankable was updated succesfully'
+      end
+    end
+
     private
     def rankable_params
       params.require(:rankable).permit(:name, :description)

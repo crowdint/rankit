@@ -1,0 +1,7 @@
+= f.label :name
+= f.text_field :name, :class => 'span5'
+= f.label :description
+= f.text_area :description, :class => 'span5', :rows => 10
+.form-actions
+  = f.submit :class => 'btn btn-primary'
+  = link_to 'Cancel', rankit.rankables_path, :class => 'btn'

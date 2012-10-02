@@ -1,6 +1,9 @@
 %h1 Rankables
 
-= link_to 'New rankable', rankit.new_rankable_path
+.row
+  .span12= link_to 'New rankable', rankit.new_rankable_path, :class => 'btn btn-small btn-primary'
 
-%table
-  = render @rankables
+.row
+  .span12
+    %table.table
+      = render @rankables

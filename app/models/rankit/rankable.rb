@@ -3,6 +3,7 @@ module Rankit
     include ActiveModel::ForbiddenAttributesProtection
 
     has_many :scores
+    has_many :comments
 
     belongs_to :creator, :class_name => 'User'
 

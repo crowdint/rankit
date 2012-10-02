@@ -1,0 +1,6 @@
+%h1 Comments for #{@rankable.name}
+
+= link_to 'New Comment', rankit.new_rankable_comment_path(@rankable), :class => 'btn btn-primary btn-small'
+
+%table.table.table-striped
+  = render @comments

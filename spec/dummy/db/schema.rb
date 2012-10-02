@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121002203001) do
+ActiveRecord::Schema.define(:version => 20121002224650) do
+
+  create_table "rankit_comments", :force => true do |t|
+    t.integer  "rankable_id"
+    t.integer  "user_id"
+    t.string   "user_email"
+    t.text     "comment"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "rankit_rankables", :force => true do |t|
     t.integer  "creator_id"

@@ -3,6 +3,7 @@ Rankit::Engine.routes.draw do
 
   resources :rankables do
     resource :score, :only => [ :edit, :update ]
+    resources :comments, :only => [ :index, :new, :create ]
   end
 
   root :to => 'rankables#index'

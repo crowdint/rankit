@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     rankit (0.0.1)
+      cached_belongs_to
       devise
       haml-rails
       rails (~> 3.2.8)
@@ -41,6 +42,8 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     builder (3.0.3)
+    cached_belongs_to (0.0.2)
+      activerecord (~> 3.2)
     capybara (1.1.2)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)

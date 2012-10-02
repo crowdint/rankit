@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "devise"
   s.add_dependency "haml-rails"
+  s.add_dependency "cached_belongs_to"
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"

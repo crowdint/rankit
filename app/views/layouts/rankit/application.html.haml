@@ -12,9 +12,11 @@
         .navbar
           .navbar-inner
             = link_to 'Rankit', rankit.root_path, :class => "brand"
+            %ul.nav
+              %li= link_to 'Sign out', rankit.destroy_user_session_path
       .row
         - if flash[:notice]
-          .notice
+          .alert.alert-success
             = flash[:notice]
         - if flash[:alert]
           .alert

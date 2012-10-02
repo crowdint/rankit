@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Rankit
+    = stylesheet_link_tag    "//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css", :media => :all
+    = stylesheet_link_tag    "rankit/application", :media => "all"
+    = javascript_include_tag "rankit/application"
+    = csrf_meta_tags
+  %body
+    .container
+      .navbar
+        .navbar-inner
+          = link_to 'Rankit', rankit.root_path, :class => "brand"
+      = yield

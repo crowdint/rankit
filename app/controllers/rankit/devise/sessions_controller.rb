@@ -1,1 +1,3 @@
-class Rankit::Devise::SessionsController < Devise::SessionsController; end
+class Rankit::Devise::SessionsController < Devise::SessionsController
+  layout 'rankit/application'
+end

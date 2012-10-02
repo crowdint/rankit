@@ -3,6 +3,7 @@ PATH
   specs:
     rankit (0.0.1)
       devise
+      haml-rails
       rails (~> 3.2.8)
 
 GEM
@@ -68,6 +69,12 @@ GEM
     ffi (1.1.5)
     gherkin (2.11.2)
       json (>= 1.4.6)
+    haml (3.1.7)
+    haml-rails (0.3.5)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (~> 3.1)
+      railties (>= 3.1, < 4.1)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)

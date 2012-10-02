@@ -1,7 +1,7 @@
 Rankit::Engine.routes.draw do
   devise_for :users, :class_name => 'Rankit::User', :module => 'rankit/devise'
 
-  resources :posts
+  resources :rankables
 
-  root :to => 'posts#index'
+  root :to => 'rankables#index'
 end

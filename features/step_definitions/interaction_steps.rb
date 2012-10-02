@@ -12,8 +12,12 @@ When /^I fill in the following:$/ do |table|
   end
 end
 
-Then /^I should see "(.*?)"$/ do |expected_content|
-  page.should have_content expected_content
+Then /^I should (not )?see "(.*?)"$/ do |negation, expected_content|
+  if negation == 'not '
+    should_not have_content expected_content
+  else
+    should have_content expected_content
+  end
 end
 
 Then /^show me the page$/ do

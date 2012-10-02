@@ -10,8 +10,8 @@ Given /^a rankable exists with name: "(.*?)"$/ do |name|
   @rankable = Rankit::Rankable.create! :name => name
 end
 
-When /^I click on its edit button$/ do
+When /^I click on its (.*?) button$/ do |button_text|
   within "tr#rankable_#{@rankable.id}" do
-    click_link 'Edit'
+    click_link button_text
   end
 end

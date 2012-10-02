@@ -15,6 +15,7 @@ module Rankit
 
     def create
       @rankable = Rankable.new(rankable_params)
+      @rankable.creator = current_user
       if @rankable.save
         redirect_to(rankit.rankables_path)
       end

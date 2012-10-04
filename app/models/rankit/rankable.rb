@@ -5,6 +5,8 @@ module Rankit
     has_many :scores
     has_many :comments
 
+    validates :name, :presence => true
+
     belongs_to :creator, :class_name => 'User'
 
     attr_accessible :description, :name

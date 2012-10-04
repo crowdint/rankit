@@ -1,5 +1,4 @@
-= f.label :name
-= f.text_field :name, :class => 'span5'
+= bootstrap_text_field f, :name, :input_options => { :class => 'span5' }
 = f.label :description
 = f.text_area :description, :class => 'span5', :rows => 10
 .form-actions

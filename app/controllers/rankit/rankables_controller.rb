@@ -18,6 +18,8 @@ module Rankit
       @rankable.creator = current_user
       if @rankable.save
         redirect_to(rankit.rankables_path)
+      else
+        render :action => 'new'
       end
     end
 
@@ -28,6 +30,8 @@ module Rankit
       @rankable.update_attributes rankable_params
       if @rankable.save
         redirect_to rankit.rankables_path, :notice => 'Rankable was updated succesfully'
+      else
+        render :action => 'edit'
       end
     end
 
